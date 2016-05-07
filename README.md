@@ -1,6 +1,6 @@
 # mtg-standings-parser
 
-> Create a JSON file from an MTG standings website.
+> Create a JSON file from a MTG standings website.
 
 **mtg-standings-parser** is a little script on top of 
 [goose-parser](https://github.com/redco/goose-parser) that extracts structured data from a standings website.
