@@ -38,6 +38,10 @@ parser.parse({
         name: "propoints",
         scope: "td:nth-child(4)",
       },
+      {
+        name: "matchpoints",
+        scope: "td:nth-child(3)",
+      },
     ]],
   },
 }).done(results => {
@@ -45,7 +49,8 @@ parser.parse({
     let o = {
       id: Transforms.id(Transforms.name(n.name)),
       name: Transforms.name(n.name),
-      propoints: Transforms.propoints(n.propoints),
+      propoints: Transforms.points(n.propoints),
+      matchpoints: Transforms.points(n.matchpoints),
     }
 
     if (Transforms.money(n.money)) {
@@ -61,13 +66,13 @@ parser.parse({
 
   mkdirp(folder, function (err) {
     if (err) {
-      console.error(err)
+      console.error(err) // eslint-disable-line
     } else {
       fs.writeFile(file, json, function (err) {
         if (err) {
-          return console.log(err)
+          return console.log(err) // eslint-disable-line
         }
-        console.log(`Successfully saved to ${file}`)
+        console.log(`Successfully saved to ${file}`) // eslint-disable-line
       })
     }
   })
