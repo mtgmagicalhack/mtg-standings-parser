@@ -4,7 +4,7 @@ const Transforms = {
     return str
       .replace(".", "-")
       .replace(/\s/g, "-")
-      .replace(/[^\x00-\x80]/g, "-")
+      .replace(/[^\x00-\x80]/g, "-") // eslint-disable-line
       .toLowerCase()
   },
 
@@ -27,7 +27,7 @@ const Transforms = {
     return `${first.replace(country, "")} ${last.replace(poy, "")}`
   },
 
-  propoints(str) {
+  points(str) {
     return parseInt(str, 10)
   },
 }

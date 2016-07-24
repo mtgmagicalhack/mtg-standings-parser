@@ -20,8 +20,8 @@ test("converts player name", t => {
   t.is(Transforms.name("(23) Nelson, Brad [US]"), "Brad Nelson")
 })
 
-test("converts pro points", t => {
-  t.is(Transforms.propoints("30"), 30)
-  t.is(Transforms.propoints("18"), 18)
-  t.is(Transforms.propoints("3"), 3)
+test("converts points", t => {
+  t.is(Transforms.points("30"), 30)
+  t.is(Transforms.points("18"), 18)
+  t.is(Transforms.points("3"), 3)
 })
