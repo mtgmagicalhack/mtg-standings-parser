@@ -19,6 +19,23 @@ Run the parser, pass a complete url as parameter.
 
     npm run parse -- url
 
+### Example 
+
+    npm run parse -- http://magic.wizards.com/en/events/coverage/ptsoi/final-standings-2016-04-24
+
+will create a JSON file with the following structure: 
+
+    [
+        {
+            "id": "steve-rubin",
+            "name": "Steve Rubin",
+            "propoints": 30,
+            "matchpoints": 37,
+            "money": 40000
+        },
+        …
+    ]
+
 ## Development 
 
 Run basic test coverage and lint your code.
