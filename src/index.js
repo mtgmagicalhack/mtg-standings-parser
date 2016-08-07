@@ -47,7 +47,6 @@ parser.parse({
 }).done(results => {
   results = _.map(results, function (n) {
     let o = {
-      id: Transforms.id(Transforms.name(n.name)),
       name: Transforms.name(n.name),
       propoints: Transforms.points(n.propoints),
       matchpoints: Transforms.points(n.matchpoints),

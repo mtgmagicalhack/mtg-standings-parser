@@ -1,13 +1,6 @@
 import test from "ava"
 import Transforms from "../build/transforms.js"
 
-test("creates player id", t => {
-  t.is(Transforms.id("Rapha\u00ebl L\u00e9vy"), "rapha-l-l-vy", "converts special characters to hyphens")
-  t.is(Transforms.id("Nicolai Herzog"), "nicolai-herzog", "dasherizes player name")
-  t.is(Transforms.id("Aaron D. Jackson"), "aaron-d--jackson", "handles spaces and dots")
-  t.is(Transforms.id("\u00d8ystein Hasnes"), "-ystein-hasnes", "converts special characters to hyphens")
-})
-
 test("converts money", t => {
   t.is(Transforms.money("$40,000"), 40000, "removes $ and ,")
   t.is(Transforms.money("$1,500"), 1500, "removes $ and ,")
