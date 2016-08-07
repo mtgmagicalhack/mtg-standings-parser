@@ -1,13 +1,5 @@
 const Transforms = {
 
-  id(str) {
-    return str
-      .replace(".", "-")
-      .replace(/\s/g, "-")
-      .replace(/[^\x00-\x80]/g, "-") // eslint-disable-line
-      .toLowerCase()
-  },
-
   money(str) {
     if (str === " ") {
       str = 0
