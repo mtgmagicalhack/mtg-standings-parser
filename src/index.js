@@ -12,10 +12,13 @@ const env = new GooseParser.PhantomEnvironment({
   url: uri,
   resources: {
     denied: [
-      "http://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js",
-      "http://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js",
+      "https://cdn.datatables.net/1.10.5/js/jquery.dataTables.min.js",
+      "https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js",
+      "https://cdn.datatables.net/responsive/1.0.4/js/dataTables.responsive.js",
+      "https://cdn.datatables.net/responsive/2.1.1/js/dataTables.responsive.min.js",
     ],
   },
+  webSecurity: false,
 })
 
 const parser = new GooseParser.Parser({

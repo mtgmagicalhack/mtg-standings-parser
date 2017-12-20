@@ -12,11 +12,12 @@ const Transforms = {
   name(str) {
     const poy = /[(]\d+[)]\s/
     const country = /\s[/\[]\w+[/\]]/
+    const team = /\s\([^)]+?\)/
     const split = str.split(", ")
     const first = split[1]
     const last = split[0]
 
-    return `${first.replace(country, "")} ${last.replace(poy, "")}`
+    return `${first.replace(country, "").replace(team, "")} ${last.replace(poy, "")}`
   },
 
   points(str) {
