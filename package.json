@@ -1,6 +1,6 @@
 {
   "name": "mtgparser",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Parse MTG results and output JSON",
   "main": "build/index.js",
   "author": "mlnmln",
