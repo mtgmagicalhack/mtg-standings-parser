@@ -1,5 +1,5 @@
-import test from "ava"
-import Transforms from "../build/transforms.js"
+const test = require("ava");
+const Transforms = require("../src/transforms.js");
 
 test("converts money", t => {
   t.is(Transforms.money("$40,000"), 40000, "removes $ and ,")
