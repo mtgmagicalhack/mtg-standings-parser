@@ -28,7 +28,9 @@ const parser = new GooseParser.Parser({
 parser
   .parse({
     rules: {
-      scope: ".sortable-table tbody tr",
+      // :not(:first-child) ignores first row in table, which currently contains
+      // table headers.
+      scope: ".sortable-table tbody tr:not(:first-child)",
       collection: [
         [
           {
