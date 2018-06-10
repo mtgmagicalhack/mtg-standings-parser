@@ -7,21 +7,17 @@
 
 ## Installation
 
-    npm install
+    yarn install
 
 ## Usage
 
-Transpile the source to ES5.
-
-    npm run build
-
 Run the parser, pass a complete url as parameter.
 
-    npm run parse -- url
+    yarn run parse -- url
 
 ### Example 
 
-    npm run parse -- http://magic.wizards.com/en/events/coverage/ptsoi/final-standings-2016-04-24
+    yarn run parse -- http://magic.wizards.com/en/events/coverage/ptsoi/final-standings-2016-04-24
 
 will create a JSON file with the following structure: 
 
@@ -38,6 +34,6 @@ will create a JSON file with the following structure:
 
 ## Development 
 
-Run basic test coverage and lint your code.
+Run basic test coverage your code.
 
-    npm test
+    yarn test
