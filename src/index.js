@@ -6,7 +6,8 @@ import GooseParser from "goose-parser"
 import Transforms from "./transforms.js"
 
 const argv = minimist(process.argv.slice(2))
-let uri = argv._[0]
+const uri = argv._[0]
+const isTeam = argv.team;
 
 const env = new GooseParser.PhantomEnvironment({
   url: uri,
@@ -50,17 +51,24 @@ parser.parse({
 }).done(results => {
   results = _.map(results, function (n) {
     let o = {
-      name: Transforms.name(n.name),
       propoints: Transforms.points(n.propoints),
       matchpoints: Transforms.points(n.matchpoints),
     }
-
     if (Transforms.money(n.money)) {
       o.money = Transforms.money(n.money)
     }
-
+    if (isTeam) {
+      return Transforms.teamNames(n.name).map(
+        name => ({name, propoints: o.propoints, matchpoints: o.matchpoints, money: o.money})
+      )
+    } else {
+      o.name = Transforms.name(n.name)
+    }
     return o
   })
+  if (isTeam) {
+    results = _.flatten(results, true)
+  }
 
   const folder = "./output"
   const json = JSON.stringify(results, null, 4)

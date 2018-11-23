@@ -20,6 +20,11 @@ const Transforms = {
     return `${first.replace(country, "").replace(team, "")} ${last.replace(poy, "")}`
   },
 
+  teamNames(str) {
+    let parts = str.split(' - ')
+    return parts.map(p => p.replace(/\([^)]+\)/, '').trim())
+  },
+
   points(str) {
     return parseInt(str, 10)
   },

@@ -2,7 +2,7 @@
 
 > Create a JSON file from a MTG standings website.
 
-**mtg-standings-parser** is a little script on top of 
+**mtg-standings-parser** is a little script on top of
 [goose-parser](https://github.com/redco/goose-parser) that extracts structured data from a standings website.
 
 ## Installation
@@ -19,11 +19,11 @@ Run the parser, pass a complete url as parameter.
 
     npm run parse -- url
 
-### Example 
+### Example
 
     npm run parse -- http://magic.wizards.com/en/events/coverage/ptsoi/final-standings-2016-04-24
 
-will create a JSON file with the following structure: 
+will create a JSON file with the following structure:
 
     [
         {
@@ -36,7 +36,11 @@ will create a JSON file with the following structure:
         …
     ]
 
-## Development 
+### Parsing team standings
+
+    npm run parse -- https://magic.wizards.com/en/events/coverage/pt25a/final-standings-2018-08-05 --team
+
+## Development
 
 Run basic test coverage and lint your code.
 
