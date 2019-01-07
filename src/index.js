@@ -1,9 +1,9 @@
-import _ from "lodash"
-import fs from "fs"
-import mkdirp from "mkdirp"
-import minimist from "minimist"
-import GooseParser from "goose-parser"
-import Transforms from "./transforms.js"
+const _ = require("lodash");
+const fs = require("fs");
+const mkdirp = require("mkdirp");
+const minimist = require("minimist");
+const GooseParser = require("goose-parser");
+const Transforms = require("./transforms.js");
 
 const argv = minimist(process.argv.slice(2))
 const uri = argv._[0]
