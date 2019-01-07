@@ -22,6 +22,11 @@ const Transforms = {
     )}`;
   },
 
+  teamNames(str) {
+    let parts = str.split(' - ')
+    return parts.map(p => p.replace(/\([^)]+\)/, '').trim())
+  },
+
   points(str) {
     return parseInt(str, 10);
   }
