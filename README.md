@@ -32,9 +32,15 @@ will create a JSON file with the following structure:
         …
     ]
 
+### Parsing mythic championships
+
+    yarn run parse -- https://magic.wizards.com/en/events/coverage/2019MC1/final-standings --mythic
+
+
 ### Parsing team standings
 
-    npm run parse -- https://magic.wizards.com/en/events/coverage/pt25a/final-standings-2018-08-05 --team
+    yarn run parse -- https://magic.wizards.com/en/events/coverage/pt25a/final-standings-2018-08-05 --team
+
 
 ## Development
 
